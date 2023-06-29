@@ -31,7 +31,7 @@
     </fragment>
     <fragment
         android:id="@+id/listFragment"
-        android:name="com.berkerdgn.airpollutionapp.presentation.list_screen.view.ListFragment"
+        android:name="com.berkerdgn.airpollutionapp.presentation.list_screen.view.view.ListFragment"
         android:label="fragment_list"
         tools:layout="@layout/fragment_list" >
         <action
