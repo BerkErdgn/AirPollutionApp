@@ -51,35 +51,4 @@ class StationsListViewModel @Inject constructor(
 
     }
 
-
-
-    /*
-    private fun getState(){
-
-        job?.cancel()
-
-
-
-            job = viewModelScope.launch {
-                    val stationsResource = getStationsUseCase.executeGetStations()
-                    stationsResource.map {
-                        when (it){
-                            is Resource.Success ->{
-                                _state.value = StationsListState(stations = it.data?: ArrayList<AllStationsModelItem>() )
-                            }
-                            is Resource.Error ->{
-                                _state.value= StationsListState(error = it.message?: "Error")
-                            }
-                            is Resource.Loading -> {
-                                _state.value= StationsListState(isLoading = true)
-                            }
-                        }
-                    }
-                }
-
-    }
-     */
-
-
-
 }

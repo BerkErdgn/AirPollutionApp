@@ -17,12 +17,7 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 object AppModule {
 
-    /*
-     @Singleton
-    @Provides
-    fun injectNormalRepo(stationsApi: StationsAPI) = StationsRepositoryImpl(stationsApi) as StationRepository
 
-     */
 
     @Singleton
     @Provides
@@ -40,8 +35,5 @@ object AppModule {
             .build()
             .create(StationsAPI::class.java)
     }
-
-
-
 
 }

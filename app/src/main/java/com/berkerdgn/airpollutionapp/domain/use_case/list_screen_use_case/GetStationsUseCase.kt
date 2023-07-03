@@ -34,28 +34,3 @@ class GetStationsUseCase @Inject constructor(
 }
 
 
-
-
-
-
-/*
-fun executeGetStations() : LiveData<Resource<AllStationsModel>> = liveData {
-
-        val stationsLiveData = MutableLiveData<Resource<AllStationsModel>>()
-
-        stationsLiveData.value = Resource.Loading()
-
-        try {
-            val stationList = repository.getStations()
-            if (stationList.isNotEmpty()) {
-                stationsLiveData.value = Resource.Success(stationList)
-            } else {
-                stationsLiveData.value = Resource.Error("Error in usecase")
-            }
-        } catch (e: Exception) {
-            stationsLiveData.value = Resource.Error("Error in usecase2")
-        }
-
-
-    }
- */

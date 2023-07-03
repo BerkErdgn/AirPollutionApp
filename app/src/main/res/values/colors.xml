@@ -12,5 +12,7 @@
     <color name="customGreen">#2C8000</color>
     <color name="customYellow">#A58E00</color>
     <color name="customGray">#ECECEC</color>
+    <color name="customRed">#D90429</color>
+    <color name="customBlue">#2B2D42</color>
 
 </resources>
