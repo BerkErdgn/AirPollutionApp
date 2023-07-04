@@ -7,10 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import com.berkerdgn.airpollutionapp.R
 import com.berkerdgn.airpollutionapp.databinding.FragmentSecondStageBinding
-import com.berkerdgn.airpollutionapp.presentation.list_screen.view.StationRecyclerAdapter
 import com.berkerdgn.airpollutionapp.presentation.list_screen.view.view.ListFragment
-import com.berkerdgn.airpollutionapp.presentation.save_screen.view.SavedFragment
-import javax.inject.Inject
+import com.berkerdgn.airpollutionapp.presentation.save_screen.view.view.SavedFragment
 
 
 class SecondStageFragment (): Fragment() {

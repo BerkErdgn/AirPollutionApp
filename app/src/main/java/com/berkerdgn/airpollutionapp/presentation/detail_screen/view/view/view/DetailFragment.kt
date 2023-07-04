@@ -2,16 +2,22 @@ package com.berkerdgn.airpollutionapp.presentation.detail_screen.view.view.view
 
 import android.os.Bundle
 import android.text.SpannableString
+import android.text.style.LineHeightSpan
 import android.text.style.UnderlineSpan
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.get
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.berkerdgn.airpollutionapp.R
 import com.berkerdgn.airpollutionapp.databinding.FragmentDetailBinding
+import com.berkerdgn.airpollutionapp.presentation.detail_screen.view.view.DetailRecyclerAdapter
 import com.berkerdgn.airpollutionapp.presentation.detail_screen.view.view.DetailViewModel
+import com.berkerdgn.airpollutionapp.presentation.save_screen.view.SavedViewModel
 
 class DetailFragment : Fragment() {
 
@@ -20,6 +26,9 @@ class DetailFragment : Fragment() {
 
 
     lateinit var viewModel :  DetailViewModel
+    private var detailRecyclerAdapter: DetailRecyclerAdapter = DetailRecyclerAdapter()
+
+    lateinit var savedViewModel : SavedViewModel
 
     lateinit var name :String
     lateinit var startDate :String
@@ -59,16 +68,25 @@ class DetailFragment : Fragment() {
         viewModel = ViewModelProvider(requireActivity()).get(DetailViewModel::class.java)
         viewModel.getDetailAccessibleAll(stationId = stationId, startDate = startDate, endDate = endDate)
 
+        binding.detailRecyclerView.adapter = detailRecyclerAdapter
+        binding.detailRecyclerView.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL,false)
 
         observeLiveDataForDetails()
+
+        binding.savefloatingActionButton.setOnClickListener {
+            savedViewModel = ViewModelProvider(requireActivity()).get(SavedViewModel::class.java)
+            Toast.makeText(context,"Successfully saved!", Toast.LENGTH_LONG).show()
+            savedViewModel.saveStation(stationID = stationId, startDate = startDate, stationName = name, endDate = endDate)
+        }
+
     }
 
     private fun observeLiveDataForDetails(){
         viewModel.state.observe(viewLifecycleOwner, Observer {
-            println(it.stationDetails)
-            val deneme = it.stationDetails
-            for (i in deneme){
-                println(i.ReadTime)
+            if (it.isLoading == true){
+                println("error")
+            }else{
+                detailRecyclerAdapter.details = it.stationDetails
             }
         })
 

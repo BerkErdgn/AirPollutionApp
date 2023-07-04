@@ -4,7 +4,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="380dp"
-    android:layout_margin="5dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:layout_marginBottom="5dp"
+    android:layout_marginTop="15dp"
     android:outlineAmbientShadowColor="@color/customGray">
 
 
@@ -26,6 +29,8 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
+
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
@@ -43,15 +48,15 @@
                     android:id="@+id/readingTimeTextView3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="TextView" />
+                    android:text="-" />
             </LinearLayout>
 
-            <ImageView
-                android:id="@+id/imageView"
+            <Button
+                android:id="@+id/button2"
                 android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_marginRight="7dp"
-                app:srcCompat="@drawable/ic_launcher_background" />
+                android:layout_height="60dp" />
+
+
 
         </LinearLayout>
 
@@ -105,7 +110,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="9"
-                                android:text="1,6" />
+                                android:text="-" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -126,7 +131,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="9"
-                                android:text="0" />
+                                android:text="-" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -147,7 +152,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="9"
-                                android:text="16" />
+                                android:text="-" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -168,7 +173,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="9"
-                                android:text="TextView" />
+                                android:text="-" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -189,7 +194,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="9"
-                                android:text="TextView" />
+                                android:text="-" />
                         </LinearLayout>
 
 
@@ -242,7 +247,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="9"
-                                android:text="1,6" />
+                                android:text="-" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -263,7 +268,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="9"
-                                android:text="0" />
+                                android:text="-" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -284,7 +289,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="9"
-                                android:text="16" />
+                                android:text="-" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -305,7 +310,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="9"
-                                android:text="TextView" />
+                                android:text="-" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -326,7 +331,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="9"
-                                android:text="TextView" />
+                                android:text="-" />
                         </LinearLayout>
 
 
@@ -376,7 +381,7 @@
                         android:id="@+id/aQIIndexTextView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="15" />
+                        android:text="-" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -394,7 +399,7 @@
                         android:id="@+id/contaminantParameterTextView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="15" />
+                        android:text="-" />
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -408,10 +413,10 @@
                         android:text="State : " />
 
                     <TextView
-                        android:id="@+id/contaminantParameterTextView13"
+                        android:id="@+id/stateTextView13"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Hava kalitesi memnun edici ve hava kirliliği az riskli veya hiç risk teşkil etmiyor." />
+                        android:text="-" />
                 </LinearLayout>
             </LinearLayout>
         </androidx.cardview.widget.CardView>

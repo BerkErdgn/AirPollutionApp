@@ -16,7 +16,6 @@ import javax.inject.Inject
 @HiltViewModel
 class DetailViewModel @Inject constructor(
     private val getStationDetailUseCase: GetStationDetailUseCase,
-    private val stateHandle : SavedStateHandle
     ) : ViewModel() {
 
     private var _state = MutableLiveData<DetailState>(DetailState())
