@@ -21,13 +21,12 @@ class SavedViewModel @Inject constructor(
 ) : ViewModel()  {
 
     private val _state = MutableLiveData<SavedState>(SavedState())
-    var state : LiveData<SavedState> = _state
+    val state : LiveData<SavedState> = _state
 
-    init {
-        getSavedStations()
-    }
 
-    private  fun getSavedStations(){
+
+
+    fun getSavedStations(){
 
         viewModelScope.launch {
             val savedResource = useCase.executeGetSavedStations()
@@ -54,7 +53,6 @@ class SavedViewModel @Inject constructor(
             repository.deleteSavedStation(savedStation)
         }
     }
-
     fun insertSavedStation ( savedStation: SavedStationModel){
         viewModelScope.launch {
             repository.insertSavedStation(savedStation)
@@ -70,5 +68,6 @@ class SavedViewModel @Inject constructor(
         val saveStation = SavedStationModel(stationID = stationID, stationName = stationName, startDate =startDate , endDate =endDate )
         insertSavedStation(saveStation)
     }
+
 
 }

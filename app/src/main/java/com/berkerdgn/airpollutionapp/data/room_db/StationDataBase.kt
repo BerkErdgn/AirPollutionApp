@@ -8,6 +8,6 @@ import com.berkerdgn.airpollutionapp.data.remote.dto.saved_dto.SavedStationModel
 @Database(entities = [SavedStationModel::class], version = 1)
 abstract class StationDataBase : RoomDatabase() {
 
-    abstract fun StationDao(): StationDao
+    abstract fun stationDao(): StationDao
 
 }

@@ -27,7 +27,7 @@ object AppModule {
     @Singleton
     @Provides
     fun provideStationsRepository(stationsAPI: StationsAPI, stationDao: StationDao): StationRepository{
-        return StationsRepositoryImpl(stationsAPI, stationDao)
+        return StationsRepositoryImpl(stationsApi = stationsAPI, stationDao = stationDao)
     }
 
 
@@ -46,12 +46,12 @@ object AppModule {
     @Provides
     fun injectStationDataBase(
         @ApplicationContext context: Context) = Room.databaseBuilder(
-        context = context, StationDataBase::class.java,"stationdb"
-        ).build()
+        context, StationDataBase::class.java,"savedStationsdb"
+        ).allowMainThreadQueries().build()
 
     @Provides
     @Singleton
-    fun injectDao(dataBase: StationDataBase)= dataBase.StationDao()
+    fun injectDao(dataBase: StationDataBase)= dataBase.stationDao()
 
 
 

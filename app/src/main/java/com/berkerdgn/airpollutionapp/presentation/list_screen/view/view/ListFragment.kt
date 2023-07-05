@@ -1,6 +1,7 @@
 package com.berkerdgn.airpollutionapp.presentation.list_screen.view.view
 
 import android.app.DatePickerDialog
+import android.opengl.Visibility
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -100,8 +101,9 @@ class ListFragment() : Fragment() {
     private fun observeLiveDataForStations() {
         viewModel.state.observe(viewLifecycleOwner, Observer {
             if (it.isLoading == true) {
-                println("Loading")
+                binding.progressBar.visibility = View.VISIBLE
             } else if (it.stations.isNotEmpty()) {
+                binding.progressBar.visibility = View.GONE
                 stationRecyclerAdapter.stations = it.stations
 
             }
@@ -125,5 +127,9 @@ class ListFragment() : Fragment() {
         stationRecyclerAdapter.endedDate=endedDate
     }
 
+    override fun onDestroy() {
+        _binding = null
+        super.onDestroy()
+    }
 
 }

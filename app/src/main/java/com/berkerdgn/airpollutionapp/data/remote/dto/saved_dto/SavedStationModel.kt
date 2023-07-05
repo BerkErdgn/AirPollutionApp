@@ -4,7 +4,7 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "savedStation")
+@Entity(tableName = "savedStations")
 data class SavedStationModel(
     @ColumnInfo(name = "stationName")
     val stationName : String,

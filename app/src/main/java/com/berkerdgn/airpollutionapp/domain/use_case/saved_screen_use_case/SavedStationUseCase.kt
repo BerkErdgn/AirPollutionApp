@@ -11,7 +11,7 @@ class SavedStationUseCase @Inject constructor(
     private val  repository: StationRepository
 ) {
 
-    suspend fun executeGetSavedStations () : LiveData<Resource<List<SavedStationModel>>> {
+     fun executeGetSavedStations () : LiveData<Resource<List<SavedStationModel>>> {
         val savedStationLiveData = MutableLiveData<Resource<List<SavedStationModel>>>()
         savedStationLiveData.value = Resource.Loading()
 
@@ -23,7 +23,7 @@ class SavedStationUseCase @Inject constructor(
                 savedStationLiveData.value = Resource.Error("Error in usecase")
             }
         }catch (e:Exception){
-            savedStationLiveData.value = Resource.Error("Error in usecase2")
+            savedStationLiveData.value = Resource.Error(e.localizedMessage ?:"Error in savedUsecase")
         }
         return savedStationLiveData
     }

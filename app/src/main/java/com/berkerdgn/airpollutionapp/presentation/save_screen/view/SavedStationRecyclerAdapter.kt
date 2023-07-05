@@ -12,7 +12,7 @@ import com.berkerdgn.airpollutionapp.R
 import com.berkerdgn.airpollutionapp.data.remote.dto.saved_dto.SavedStationModel
 import com.berkerdgn.airpollutionapp.presentation.second_stage_screen.view.SecondStageFragmentDirections
 
-class SavedStationRecyclerView (): RecyclerView.Adapter<SavedStationRecyclerView.SavedStationViewHolder> (){
+class SavedStationRecyclerAdapter (): RecyclerView.Adapter<SavedStationRecyclerAdapter.SavedStationViewHolder> (){
 
     class SavedStationViewHolder (itemView:View): RecyclerView.ViewHolder(itemView)
 

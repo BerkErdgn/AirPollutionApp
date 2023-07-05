@@ -10,11 +10,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.get
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.berkerdgn.airpollutionapp.R
 import com.berkerdgn.airpollutionapp.databinding.FragmentDetailBinding
+import com.berkerdgn.airpollutionapp.domain.use_case.saved_screen_use_case.SavedStationUseCase
 import com.berkerdgn.airpollutionapp.presentation.detail_screen.view.view.DetailRecyclerAdapter
 import com.berkerdgn.airpollutionapp.presentation.detail_screen.view.view.DetailViewModel
 import com.berkerdgn.airpollutionapp.presentation.save_screen.view.SavedViewModel
@@ -75,8 +77,8 @@ class DetailFragment : Fragment() {
 
         binding.savefloatingActionButton.setOnClickListener {
             savedViewModel = ViewModelProvider(requireActivity()).get(SavedViewModel::class.java)
-            Toast.makeText(context,"Successfully saved!", Toast.LENGTH_LONG).show()
             savedViewModel.saveStation(stationID = stationId, startDate = startDate, stationName = name, endDate = endDate)
+            Toast.makeText(context,"Successfully saved!", Toast.LENGTH_LONG).show()
         }
 
     }
@@ -90,6 +92,11 @@ class DetailFragment : Fragment() {
             }
         })
 
+    }
+
+    override fun onDestroy() {
+        _binding = null
+        super.onDestroy()
     }
 
 }

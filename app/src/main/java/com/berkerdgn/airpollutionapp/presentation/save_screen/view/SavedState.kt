@@ -5,5 +5,5 @@ import com.berkerdgn.airpollutionapp.data.remote.dto.saved_dto.SavedStationModel
 data class SavedState (
     val isLoading : Boolean = false,
     val error : String = "",
-    val savedStations : List<SavedStationModel> = emptyList()
+    val savedStations : List<SavedStationModel> = listOf()
         )

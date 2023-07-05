@@ -13,7 +13,7 @@ interface StationDao {
     @Delete
     suspend fun deleteStation(station: SavedStationModel)
 
-    @Query(value = "SELECT * FROM savedStations")
+    @Query("SELECT * FROM savedStations")
     fun stationLiveData(): List<SavedStationModel>
 
 

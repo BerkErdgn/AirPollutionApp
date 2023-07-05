@@ -51,4 +51,10 @@ class SplashFragment : Fragment() {
 
         timer.start()
     }
+
+    override fun onDestroy() {
+        _binding = null
+        super.onDestroy()
+    }
+
 }

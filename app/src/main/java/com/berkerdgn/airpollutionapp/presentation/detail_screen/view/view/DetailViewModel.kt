@@ -4,6 +4,8 @@ package com.berkerdgn.airpollutionapp.presentation.detail_screen.view.view
 
 import androidx.lifecycle.*
 import com.berkerdgn.airpollutionapp.data.remote.dto.StationDetailModelItem
+import com.berkerdgn.airpollutionapp.data.remote.dto.saved_dto.SavedStationModel
+import com.berkerdgn.airpollutionapp.domain.repository.StationRepository
 import com.berkerdgn.airpollutionapp.domain.use_case.detail_screen_use_case.GetStationDetailUseCase
 import com.berkerdgn.airpollutionapp.util.Constants.END_DATE
 import com.berkerdgn.airpollutionapp.util.Constants.START_DATE
@@ -53,5 +55,8 @@ class DetailViewModel @Inject constructor(
         }
 
     }
+
+
+
 
 }
