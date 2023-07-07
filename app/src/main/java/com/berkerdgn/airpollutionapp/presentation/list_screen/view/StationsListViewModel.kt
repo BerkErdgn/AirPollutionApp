@@ -1,7 +1,6 @@
 package com.berkerdgn.airpollutionapp.presentation.list_screen.view
 
 import androidx.lifecycle.*
-import com.berkerdgn.airpollutionapp.data.remote.dto.AllStationsModel
 import com.berkerdgn.airpollutionapp.data.remote.dto.AllStationsModelItem
 import com.berkerdgn.airpollutionapp.domain.use_case.list_screen_use_case.GetStationsUseCase
 import com.berkerdgn.airpollutionapp.util.Resource

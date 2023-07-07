@@ -1,7 +1,6 @@
 package com.berkerdgn.airpollutionapp.presentation.list_screen.view
 
-import androidx.lifecycle.MutableLiveData
-import com.berkerdgn.airpollutionapp.data.remote.dto.AllStationsModel
+
 import com.berkerdgn.airpollutionapp.data.remote.dto.AllStationsModelItem
 
 data class StationsListState(

@@ -4,7 +4,6 @@ import androidx.lifecycle.LiveData
 import com.berkerdgn.airpollutionapp.data.remote.dto.AllStationsModel
 import com.berkerdgn.airpollutionapp.data.remote.dto.StationDetailModel
 import com.berkerdgn.airpollutionapp.data.remote.dto.saved_dto.SavedStationModel
-import com.berkerdgn.airpollutionapp.util.Resource
 
 interface StationRepository {
 

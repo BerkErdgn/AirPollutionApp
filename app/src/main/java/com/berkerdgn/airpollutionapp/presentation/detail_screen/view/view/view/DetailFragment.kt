@@ -2,7 +2,6 @@ package com.berkerdgn.airpollutionapp.presentation.detail_screen.view.view.view
 
 import android.os.Bundle
 import android.text.SpannableString
-import android.text.style.LineHeightSpan
 import android.text.style.UnderlineSpan
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -10,13 +9,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.get
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.berkerdgn.airpollutionapp.R
 import com.berkerdgn.airpollutionapp.databinding.FragmentDetailBinding
-import com.berkerdgn.airpollutionapp.domain.use_case.saved_screen_use_case.SavedStationUseCase
 import com.berkerdgn.airpollutionapp.presentation.detail_screen.view.view.DetailRecyclerAdapter
 import com.berkerdgn.airpollutionapp.presentation.detail_screen.view.view.DetailViewModel
 import com.berkerdgn.airpollutionapp.presentation.save_screen.view.SavedViewModel

@@ -5,13 +5,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.navigation.Navigation
-import androidx.navigation.findNavController
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.berkerdgn.airpollutionapp.R
 import com.berkerdgn.airpollutionapp.data.remote.dto.AllStationsModelItem
-import com.berkerdgn.airpollutionapp.presentation.detail_screen.view.view.view.DetailFragmentDirections
 import com.berkerdgn.airpollutionapp.presentation.second_stage_screen.view.SecondStageFragmentDirections
 
 

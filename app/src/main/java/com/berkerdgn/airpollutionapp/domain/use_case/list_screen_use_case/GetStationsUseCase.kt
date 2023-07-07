@@ -2,13 +2,9 @@ package com.berkerdgn.airpollutionapp.domain.use_case.list_screen_use_case
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.liveData
 import com.berkerdgn.airpollutionapp.data.remote.dto.AllStationsModel
 import com.berkerdgn.airpollutionapp.domain.repository.StationRepository
-
 import com.berkerdgn.airpollutionapp.util.Resource
-import kotlinx.coroutines.coroutineScope
-import kotlinx.coroutines.supervisorScope
 import javax.inject.Inject
 
 class GetStationsUseCase @Inject constructor(
