@@ -22,6 +22,7 @@ class GetStationDetailUseCase @Inject constructor(
 
         val deneme = "deneme"
 
+
         try {
             val stationDetail = repository.getStationDetails(stationId, startDate, endDate)
             if (stationDetail.isNotEmpty()){
