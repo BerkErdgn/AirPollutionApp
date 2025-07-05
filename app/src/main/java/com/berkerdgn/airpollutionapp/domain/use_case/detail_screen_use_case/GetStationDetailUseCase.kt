@@ -20,6 +20,8 @@ class GetStationDetailUseCase @Inject constructor(
         val stationDetailLiveData = MutableLiveData<Resource<StationDetailModel>>()
         stationDetailLiveData.value = Resource.Loading()
 
+ 
+
         try {
             val stationDetail = repository.getStationDetails(stationId, startDate, endDate)
             if (stationDetail.isNotEmpty()){
