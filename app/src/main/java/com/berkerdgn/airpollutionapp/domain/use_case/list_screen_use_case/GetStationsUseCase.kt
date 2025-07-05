@@ -22,6 +22,7 @@ class GetStationsUseCase @Inject constructor(
             } else {
                 stationsLiveData.value = Resource.Error("Error in usecase")
             }
+            
         } catch (e: Exception) {
             stationsLiveData.value = Resource.Error("Error in usecase2")
         }
